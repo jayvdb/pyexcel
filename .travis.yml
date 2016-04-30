@@ -9,6 +9,16 @@ python:
   - 3.3
   - 3.4
   - 3.5
+matrix:
+  include:
+    - python: 2.7_with_system_site_packages
+      sudo: false
+      dist: trusty
+      addons:
+        apt:
+          packages:
+            - python-texttable
+
 before_install:
   - if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then pip install ordereddict; fi
   - if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then pip install weakrefset; fi
