@@ -16,6 +16,8 @@ matrix:
       dist: trusty
       addons:
         apt:
+          sources:
+            - debian-sid
           packages:
             - python-texttable
 
