@@ -9,6 +9,29 @@ python:
   - 3.3
   - 3.4
   - 3.5
+matrix:
+  include:
+    - python: 2.7
+      dist: trusty
+      sudo: required
+      virtualenv:
+        system_site_packages: true
+      addons:
+        apt:
+          sources:
+            - debian-sid  # lxml 3.6.0
+          packages:
+            - python-requests
+            - python-sqlalchemy
+            - python-xlwt
+            - python-xlrd
+            - python-lxml
+            - python-openpyxl
+            - python-flask
+            - python-coverage
+            - python-nose
+            - python-mock
+            - python-wheel
 before_install:
   - if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then pip install ordereddict; fi
   - if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then pip install weakrefset; fi
