@@ -39,6 +39,7 @@ before_install:
   - if [[ $TRAVIS_PYTHON_VERSION == "pypy" ]]; then pip install lxml==3.4.4; fi
   - pip --version
   - python -c "import setuptools; print(setuptools.__version__)"
+  - pip install --upgrade setuptools>17.1
   - if [[ -f rnd_requirements.txt ]]; then pip install -r rnd_requirements.txt; fi
   - pip install -r tests/requirements.txt
 script:
