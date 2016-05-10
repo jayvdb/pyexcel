@@ -26,6 +26,7 @@ matrix:
             - python-xlwt
             - python-xlrd
             - python-lxml
+            - python-texttable
             - python-openpyxl
             - python-flask
             - python-coverage
