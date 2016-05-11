@@ -39,7 +39,10 @@ before_install:
       pip install -r rnd_requirements.txt ;
     fi
   - pip install -r tests/requirements.txt
+  - pip freeze
 script:
-  make test
+  - pip install --upgrade setuptools
+  - python setup.py install
+  - make test
 after_success:
   codecov
