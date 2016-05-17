@@ -6,6 +6,7 @@ mock
 glob2
 flask
 lxml
+nose-faulthandler
 pyexcel-xlsx>=0.1.0
 pyexcel-ods3>=0.1.0
 pyexcel-xls>=0.1.0
